@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div data-test=''>
+    <div data-test='component-app'>
 
     </div>
   );
