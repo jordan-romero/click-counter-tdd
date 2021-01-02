@@ -51,8 +51,12 @@ test('renders decrement button', () => {
 
 test('clicking on button decrements count', () => {
   const wrapper = setup()
+  const incButton = findByTestAttr(wrapper, 'increment-button');
+  incButton.simulate('click');
   const button = findByTestAttr(wrapper, 'decrement-button')
   button.simulate('click')
   const count = findByTestAttr(wrapper, 'count').text()
   expect(count).toBe('0')
 })
+
+// test('counter is greater than zero')
