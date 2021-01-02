@@ -43,6 +43,12 @@ test('clicking on button increments counter', () => {
   expect(count).toBe('1')
 })
 
+test('renders decrement button', () => {
+  const wrapper = setup()
+  const button = findByTestAttr(wrapper, 'decrement-button')
+  expect(button.length).toBe(1)
+})
+
 test('clicking on button decrements count', () => {
   const wrapper = setup()
   const button = findByTestAttr(wrapper, 'decrement-button')
